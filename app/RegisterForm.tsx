@@ -1,7 +1,7 @@
 "use client"; // Required for handling state like password matching
 
 import { useState } from "react";
-import ChildComponent from './ChildComponent';
+
 
 
 export default function ParentPage() {
@@ -11,12 +11,11 @@ export default function ParentPage() {
     <div>
       <p>Status: {isLogin ? 'Logged In' : 'Logged Out'}</p>
       {/* 3. Pass the setter function here */}
-      <ChildComponent setIsLogin={setIsLogin} />
     </div>
   );
 }
 
-export default function SignUpForm() {
+  function SignUpForm() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",

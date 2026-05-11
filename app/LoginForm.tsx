@@ -1,20 +1,21 @@
 "use client";
 
 import { useState } from "react";
-export default function ParentPage() {
 
+
+
+function ParentPage() {
 const [isLogin, setIsLogin] = useState<boolean>(false);
-
-  return (
+return (
     <div>
       <p>Status: {isLogin ? 'Logged In' : 'Logged Out'}</p>
       {/* 3. Pass the setter function here */}
-      <ChildComponent setIsLogin={setIsLogin} />
+     
     </div>
   );
 }
 
-export default function LoginPage() {
+export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
