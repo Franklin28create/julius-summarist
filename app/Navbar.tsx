@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <>
       <button onClick={() => setIsModalOpen(true)}>
-        Sign In
+        Login
       </button>
 
       {isModalOpen && (
