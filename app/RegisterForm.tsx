@@ -4,18 +4,7 @@ import { useState } from "react";
 
 
 
-export default function ParentPage() {
-  const [isLogin, setIsLogin] = useState<boolean>(false);
-
-  return (
-    <div>
-      <p>Status: {isLogin ? 'Logged In' : 'Logged Out'}</p>
-      {/* 3. Pass the setter function here */}
-    </div>
-  );
-}
-
-  function SignUpForm() {
+  export default function SignUpForm() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",

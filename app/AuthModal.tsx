@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react"
-import LoginForm from "./LogInForm"
+import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 
 export default function AuthModal() {

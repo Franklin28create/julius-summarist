@@ -5,10 +5,14 @@ import AuthModal from "./AuthModal";
 
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  
+  
   return (
     <>
-      <button onClick={() => setIsModalOpen(true)}>
+      <button className="nav__cta--btn" 
+      onClick={() => {
+      console.log("Button clicked!")
+      setIsModalOpen(true)}}>
         Login
       </button>
 
