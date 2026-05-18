@@ -9,13 +9,12 @@ export default function Navbar() {
   
   return (
     <>
-      <button className="nav__cta--btn" 
+      <button className="nav__list--login" 
       onClick={() => {
       console.log("Button clicked!")
       setIsModalOpen(true)}}>
         Login
       </button>
-
       {isModalOpen && (
         <AuthModal onClose={() => setIsModalOpen(false)} />
       )}

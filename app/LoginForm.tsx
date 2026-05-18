@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import AuthModal from "./AuthModal";
 
 
 
@@ -46,10 +47,17 @@ export default function LoginForm() {
 
         <button 
           type="submit" 
-          className="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition"
+          className="home__cta--btn"
+          onClick={() => {
+          console.log("Login button clicked!")
+          setIsModalOpen(true);
+          }}
         >
           Login
         </button>
+        {isModalOpen && (
+        <AuthModal onClose={() => setIsModalOpen(false)} />
+      )}
       </form>
     </div>
   );
