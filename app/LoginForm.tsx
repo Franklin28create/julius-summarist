@@ -17,48 +17,39 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <form onSubmit={handleSubmit} className="p-8 bg-white shadow-md rounded-lg border border-gray-200 w-80">
-        <h1 className="text-2xl font-bold mb-6 text-center">Login</h1>
-        
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-1">Email</label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="w-full p-2 border rounded-md"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+    <>
+    <section id="landing">
+      <div className="container">
+        <div className="row">
+          <div className="landing__wrapper">
+            <div className="landing__content">
+              <div className="landing__content__title">
+                Gain More Knowledge
+                <br className="remove--tablet"/>
+                in less time
+              </div>
+              <div className="landing__content__subtitle">
+                Great summaries for busy People,
+                <br className="remove--tablet"/>
+                individuals who barely have time to read,
+                <br className="remove--tablet"/>
+                and even people who don't like to read.
+              </div>
+              <button className="btn home__cta--btn" 
+                    onClick={() => {
+                    console.log("Button clicked!")
+                    setIsModalOpen(true)}}>
+                      Login
+                    </button>
+                    {isModalOpen && (
+                      <AuthModal onClose={() => setIsModalOpen(false)} />
+                    )}
+            </div>
+          </div>
         </div>
-
-        <div className="mb-6">
-          <label className="block text-sm font-medium mb-1">Password</label>
-          <input
-            type="password"
-            placeholder="Enter your password"
-            className="w-full p-2 border rounded-md"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-
-        <button 
-          type="submit" 
-          className="home__cta--btn"
-          onClick={() => {
-          console.log("Login button clicked!")
-          setIsModalOpen(true);
-          }}
-        >
-          Login
-        </button>
-        {isModalOpen && (
-        <AuthModal onClose={() => setIsModalOpen(false)} />
-      )}
-      </form>
-    </div>
+      </div>
+    </section>
+    
+    </>
   );
 }
