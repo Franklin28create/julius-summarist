@@ -4,17 +4,23 @@ import { useState } from "react"
 import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 
-export default function AuthModal() {
 
-    const [isLogin, setIsLogin] = useState(true)
+type AuthModalProps = {
+  onClose: () => void;
+};
 
-    return (
-        <div className="auth-container">
-            {isLogin ? <LoginForm setIsLogin={setIsLogin} /> : <RegisterForm setIsLogin={setIsLogin} />}
-            <button onClick={() => setIsLogin(!isLogin)}>
-                {isLogin ? "Don't have an account? Sign Up" : "Already have an account? Sign In"}
-            </button>
+export default function AuthModal({ onClose }: AuthModalProps) {
+  const [isLogin, setIsLogin] = useState(true);
 
-        </div>
-    )
+  return (
+    <div className="auth-container">
+      <button onClick={onClose}>X</button>
+
+      {isLogin ? <LoginForm /> : <RegisterForm />}
+
+      <button onClick={() => setIsLogin(!isLogin)}>
+        {isLogin ? "Sign Up" : "Sign In"}
+      </button>
+    </div>
+  );
 }
