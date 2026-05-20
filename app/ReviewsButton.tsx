@@ -8,16 +8,18 @@ export default function ReviewsButton() {
   
   
   return (
-    <>
-      <button className="nav__list--login" 
-      onClick={() => {
-      console.log("Button clicked!")
-      setIsModalOpen(true)}}>
+    <div>
+    <button
+    className="btn home__cta--btn"
+    onClick={() => {    
+    setIsModalOpen(true);
+    }}
+    >
         Login
-      </button>
-      {isModalOpen && (
+    </button>
+    {isModalOpen && (
         <AuthModal onClose={() => setIsModalOpen(false)} />
-      )}
-    </>
+    )}
+    </div>
   );
 }

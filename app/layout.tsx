@@ -10,6 +10,7 @@ import Navbar from "./Navbar";
 import Statistics from "./Statistics";
 import Statistics2 from "./Statistics2";
 import Hero from "./Hero";
+import ReviewsButton from "./ReviewsButton";
 
 
 const geistSans = Geist({
@@ -223,7 +224,7 @@ export default function RootLayout({
             </div>
           </div>
           <div className="reviews__btn--wrapper">
-            <button className="btn home__cta--btn">Login</button>
+            <ReviewsButton />
           </div>
         </div>
       </div>

@@ -23,8 +23,7 @@ return (
                 and even people who don’t like to read.
               </div>
               <button className="btn home__cta--btn"
-              onClick={() => {
-                console.log("Button clicked!")
+              onClick={() => {                
                 setIsModalOpen(true)}}             
               >
                 Login
