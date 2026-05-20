@@ -6,6 +6,8 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { RiLeafLine } from "react-icons/ri";
 import "./globals.css"
 import Navbar from "./Navbar";
+import Statistics from "./Statistics";
+import Statistics2 from "./Statistics2";
 
 
 const geistSans = Geist({
@@ -42,8 +44,7 @@ export default function RootLayout({
           <li className="nav__list nav__list--mobile">Help</li>
           <li className="nav__list nav__list--login">
             <Navbar />
-          </li>
-          
+          </li>          
         </ul>
       </div>
     </nav>
@@ -82,17 +83,8 @@ export default function RootLayout({
             </div>
           </div>
           <div className="statistics__wrapper">
-            <div className="statistics__content--header">
-              <div className="statistics__heading">Enhance your knowledge</div>
-              <div className="statistics__heading">Achieve greater success</div>
-              <div className="statistics__heading">Improve your health</div>
-              <div className="statistics__heading">
-                Develop better parenting skills
-              </div>
-              <div className="statistics__heading">Increase happiness</div>
-              <div className="statistics__heading">
-                Be the best version of yourself!
-              </div>
+            <div className="statistics__content--header">              
+              <Statistics />
             </div>
             <div className="statistics__content--details">
               <div className="statistics__data">
@@ -145,12 +137,7 @@ export default function RootLayout({
             <div
               className="statistics__content--header statistics__content--header-second"
             >
-              <div className="statistics__heading">Expand your learning</div>
-              <div className="statistics__heading">Accomplish your goals</div>
-              <div className="statistics__heading">Strengthen your vitality</div>
-              <div className="statistics__heading">Become a better caregiver</div>
-              <div className="statistics__heading">Improve your mood</div>
-              <div className="statistics__heading">Maximize your abilities</div>
+              <Statistics2 />
             </div>
           </div>
         </div>
