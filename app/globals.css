@@ -209,8 +209,6 @@ button:disabled {
   font-weight: 300;
 }
 
-
-
 .statistics__heading {
   font-size: 32px;
   font-weight: 500;
@@ -222,19 +220,15 @@ button:disabled {
   margin-bottom: 0;
 }
 
+.statistics__heading {
+  font-size: 32px;
+  font-weight: 500;
+  color: #6b757b;
+  margin-bottom: 16px;
+  transition: color 300ms ease;
+}
 .statistics__heading--active {
   color: #2bd97c;
-  animation: statisticsBlink 900ms ease-in-out infinite;
-}
-
-@keyframes statisticsBlink {
-  0%, 100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.35;
-  }
 }
 
 .statistics__wrapper {

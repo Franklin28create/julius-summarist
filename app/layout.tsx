@@ -4,10 +4,12 @@ import "./globals.css";
 import { AiFillAudio, AiFillFileText, AiFillBulb } from "react-icons/ai";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { RiLeafLine } from "react-icons/ri";
+import { BiCrown } from "react-icons/bi";
 import "./globals.css"
 import Navbar from "./Navbar";
 import Statistics from "./Statistics";
 import Statistics2 from "./Statistics2";
+import Hero from "./Hero";
 
 
 const geistSans = Geist({
@@ -37,7 +39,7 @@ export default function RootLayout({
       <div className="nav__wrapper">
         <figure className="nav__img--mask">
           <img className="nav__img" src="https://summarist.vercel.app/_next/static/media/logo.1b1c490b.png" alt="logo" />
-        </figure>
+        </figure>        
         <ul className="nav__list--wrapper">          
           <li className="nav__list nav__list--mobile">About</li>
           <li className="nav__list nav__list--mobile">Contact</li>
@@ -48,6 +50,7 @@ export default function RootLayout({
         </ul>
       </div>
     </nav>
+    <Hero />
     {children}
     <section id="features">
       <div className="container">
@@ -153,6 +156,10 @@ export default function RootLayout({
                 <div className="review__name">Hanna M.</div>
                 <div className="review__stars">
                   <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
                 </div>
               </div>
               <div className="review__body">
@@ -166,6 +173,10 @@ export default function RootLayout({
                 <div className="review__name">David B.</div>
                 <div className="review__stars">
                   <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
                 </div>
               </div>
               <div className="review__body">
@@ -178,6 +189,10 @@ export default function RootLayout({
               <div className="review__header">
                 <div className="review__name">Nathan S.</div>
                 <div className="review__stars">
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
                   <BsStarFill />
                 </div>
               </div>
@@ -193,6 +208,10 @@ export default function RootLayout({
                 <div className="review__name">Ryan R.</div>
                 <div className="review__stars">
                   <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
+                  <BsStarFill />
                 </div>
               </div>
               <div className="review__body">
@@ -204,7 +223,7 @@ export default function RootLayout({
             </div>
           </div>
           <div className="reviews__btn--wrapper">
-            {/* <button className="btn home__cta--btn">Login</button> */}
+            <button className="btn home__cta--btn">Login</button>
           </div>
         </div>
       </div>
@@ -216,13 +235,16 @@ export default function RootLayout({
           <div className="numbers__wrapper">
             <div className="numbers">
               <div className="numbers__icon">
-                {/* <BiCrown /> */}
+                <BiCrown />
               </div>
               <div className="numbers__title">3 Million</div>
               <div className="numbers__sub--title">Downloads on all platforms</div>
             </div>
             <div className="numbers">
               <div className="numbers__icon numbers__star--icon">
+                <BsStarFill />
+                <BsStarFill />
+                <BsStarFill />
                 <BsStarFill />
                 <BsStarHalf />
               </div>

@@ -14,8 +14,7 @@ export default function Statistics() {
   }, []);
 
   return (
-    <div className="statistics__wrapper">
-      <div className="statistics__content--header">
+    <>
         <div className={`statistics__heading ${activeIndex === 0 ? "statistics__heading--active" : ""}`}>
           Expand your learning
         </div>
@@ -33,9 +32,9 @@ export default function Statistics() {
         </div>
         <div className={`statistics__heading ${activeIndex === 5 ? "statistics__heading--active" : ""}`}>
           Maximize your abilities!
-        </div>
-      </div>
+        </div>      
       {/* keep your statistics details box here */}
-    </div>
+      
+    </>
   );
 }
