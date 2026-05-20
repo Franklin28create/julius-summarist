@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { AiFillAudio } from "react-icons/ai";
+import { AiFillAudio, AiFillFileText, AiFillBulb } from "react-icons/ai";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { RiLeafLine } from "react-icons/ri";
 import "./globals.css"
@@ -29,13 +29,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-   <html lang="en"> 
-     
-  <body>
-    <nav className="nav">
+    <html>
+    <body>
+      <nav className="nav">
       <div className="nav__wrapper">
         <figure className="nav__img--mask">
-          {/* <img className="nav__img" src="null" alt="logo" /> */}
+          <img className="nav__img" src="https://summarist.vercel.app/_next/static/media/logo.1b1c490b.png" alt="logo" />
         </figure>
         <ul className="nav__list--wrapper">          
           <li className="nav__list nav__list--mobile">About</li>
@@ -48,6 +47,7 @@ export default function RootLayout({
         </ul>
       </div>
     </nav>
+    {children}
     <section id="features">
       <div className="container">
         <div className="row">
@@ -55,7 +55,7 @@ export default function RootLayout({
           <div className="features__wrapper">
             <div className="features">
               <div className="features__icon">
-                {/* <AiFillFileText /> */}
+                <AiFillFileText />
               </div>
               <div className="features__title">Read or listen</div>
               <div className="features__sub--title">
@@ -64,7 +64,7 @@ export default function RootLayout({
             </div>
             <div className="features">
               <div className="features__icon">
-                {/* <AiFillBulb /> */}
+                <AiFillBulb />
               </div>
               <div className="features__title">Find your next read</div>
               <div className="features__sub--title">
@@ -77,7 +77,7 @@ export default function RootLayout({
               </div>
               <div className="features__title">Briefcasts</div>
               <div className="features__sub--title">
-                Gain valuable insights from briefcasts
+                Gain valuable insights from briefcasts.
               </div>
             </div>
           </div>
@@ -339,7 +339,7 @@ export default function RootLayout({
       </div>
     </section>
   </body>
-</html>
+  </html>
   );
 }
 

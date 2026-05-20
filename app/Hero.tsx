@@ -4,7 +4,7 @@ import { useState } from "react";
 import AuthModal from "./AuthModal";
 
 export default function Hero() {
-const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 return (
 <section id="landing">
       <div className="container">
@@ -23,7 +23,9 @@ return (
                 and even people who don’t like to read.
               </div>
               <button className="btn home__cta--btn"
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => {
+                console.log("Button clicked!")
+                setIsModalOpen(true)}}             
               >
                 Login
             </button>
@@ -32,11 +34,11 @@ return (
                   )}
             </div>
             <figure className="landing__image--mask">
-              {/* <img src="" alt="landing" /> */}
+              <img src="https://summarist.vercel.app/_next/static/media/landing.e4787d01.png" alt="landing" />
             </figure>
           </div>
         </div>
       </div>
-    </section>
-    );
-};
+</section>
+);
+}
