@@ -8,7 +8,7 @@ export default function ReviewsButton() {
   
   
   return (
-    <div>
+    <>
     <button
     className="btn home__cta--btn"
     onClick={() => {    
@@ -20,6 +20,6 @@ export default function ReviewsButton() {
     {isModalOpen && (
         <AuthModal onClose={() => setIsModalOpen(false)} />
     )}
-    </div>
+    </>
   );
 }
