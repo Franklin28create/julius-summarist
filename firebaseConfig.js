@@ -9,8 +9,7 @@ apiKey: "AIzaSyD4qE2n8THm0cOeD37l_2FzcFiPtYlGntc",
   projectId: "advanced-virtual-interns-998ef",
   storageBucket: "advanced-virtual-interns-998ef.firebasestorage.app",
   messagingSenderId: "1071417095162",
-  appId: "1:1071417095162:web:0a50bf8950d1ba74e4aa43",
-  measurementId: "G-SRWE71SWCE"
+  appId: "1:1071417095162:web:0a50bf8950d1ba74e4aa43"  
 }
 
 // Initialize Firebase
